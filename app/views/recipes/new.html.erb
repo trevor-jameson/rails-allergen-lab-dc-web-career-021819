@@ -1,0 +1,7 @@
+<%= form_for(@recipe) do |f| %>
+    <%= f.value :name %>
+    <%= f.text_field :name %>
+    <%= f.value :ingredients %>
+    <%= f.collection_select :id, Ingredients.all, :id, :name %>
+    <%= f.submit %>
+<% end %>
